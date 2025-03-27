@@ -10,7 +10,7 @@ namespace WinFormsApp2
     {
         public string Name { get; set; }
         public string company { get; set; }
-        public string age { get; set; }
+        public int age { get; set; }
         public string text { get; set; }
         public string image { get; set; }
     }

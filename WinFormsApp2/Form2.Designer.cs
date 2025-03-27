@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp2
 {
-    partial class addCompany
+    partial class addEmployee
     {
         /// <summary>
         /// Required designer variable.

@@ -15,14 +15,14 @@ using System.Xml.Linq;
 
 namespace WinFormsApp2
 {
-    public partial class addCompany : Form
+    public partial class addEmployee : Form
     {
         private Employee _employee = new Employee();
         private string _nameOld;
         private bool _nameTest = false;
         private bool _ageTest = false;
         private bool _textTest = false;
-        public addCompany(string name)
+        public addEmployee(string name)
         {
             InitializeComponent();
             this._nameOld = name;
@@ -51,7 +51,7 @@ namespace WinFormsApp2
                 {
                     this._employee = employee;
                     comboBox1.Text = employee.company;
-                    textBox2.Text = employee.age;
+                    textBox2.Text = employee.age.ToString();
                     textBox3.Text = employee.text;
                     pictureBox1.ImageLocation = employee.image;
                     return;
@@ -108,7 +108,7 @@ namespace WinFormsApp2
                 {
                     Name = textBox1.Text,
                     company = comboBox1.Text,
-                    age = textBox2.Text,
+                    age = int.Parse(textBox2.Text),
                     text = textBox3.Text,
                     image = pictureBox1.ImageLocation
                 };
@@ -152,13 +152,13 @@ namespace WinFormsApp2
                 pictureBox1.Load(loadPicture);
 
 
-                string loadSave = Path.Combine(Directory.GetParent(Directory.GetParent(Directory.GetParent(Directory.GetParent(Application.StartupPath).FullName).FullName).FullName).FullName, "Picture", "employee\\")
-                + Path.GetFileName(loadPicture);
+                //Data.pathPictureEmployee = Path.Combine(Directory.GetParent(Directory.GetParent(Directory.GetParent(Directory.GetParent(Application.StartupPath).FullName).FullName).FullName).FullName, "Picture", "employee\\")
+                //+ Path.GetFileName(loadPicture);
 
 
                 try
                 {
-                    File.Copy(loadPicture, loadSave);
+                    File.Copy(loadPicture, Data.pathPictureEmployee + "\\" + Path.GetFileName(loadPicture));
                 }
                 catch (Exception ex)
                 {
@@ -166,7 +166,7 @@ namespace WinFormsApp2
                 }
 
 
-                pictureBox1.ImageLocation = loadSave;
+                pictureBox1.ImageLocation = Data.pathPictureEmployee + "\\" + Path.GetFileName(loadPicture);
 
 
 

@@ -1,2 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Employer />
+<Employer>
+  <emloyer name="Liker">
+    <company>Microsoft</company>
+    <age>19</age>
+    <text>asfdalskdhfoams;vkjasdf;klasjkldtjkvcsadf</text>
+    <image>C:\Users\Нагибатор\source\repos\WinFormsApp2\WinFormsApp2\Picture\employee\714995a917116cfb47fc1520790474ae.jpg</image>
+  </emloyer>
+</Employer>

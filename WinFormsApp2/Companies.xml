@@ -1,2 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Company />
+<Company>
+  <company name="Microsoft">
+    <text>this information don't give you rules for you</text>
+    <image>C:\Users\Нагибатор\source\repos\WinFormsApp2\WinFormsApp2\Picture\company\522678effac9f4baa4b9d24f743a17a4.jpg</image>
+  </company>
+</Company>

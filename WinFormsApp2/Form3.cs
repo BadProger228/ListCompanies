@@ -78,18 +78,18 @@ namespace WinFormsApp2
                 pictureBox1.Load(loadPicture);
 
 
-                string loadSave = Path.Combine(Directory.GetParent(Directory.GetParent(Directory.GetParent(Directory.GetParent(Application.StartupPath).FullName).FullName).FullName).FullName, "Picture", "company\\")
-                + Path.GetFileName(loadPicture);
+                //string loadSave = Path.Combine(Directory.GetParent(Directory.GetParent(Directory.GetParent(Directory.GetParent(Application.StartupPath).FullName).FullName).FullName).FullName, "Picture", "company\\")
+                //+ Path.GetFileName(loadPicture);
 
                 try
                 {
-                    File.Copy(loadPicture, loadSave);
+                    File.Copy(loadPicture, Data.pathPictureCompany + "\\" + Path.GetFileName(loadPicture));
                 }
                 catch
                 {
                     MessageBox.Show("You open picture with the same name");
                 }
-                pictureBox1.ImageLocation = loadSave;
+                pictureBox1.ImageLocation = Data.pathPictureCompany + "\\" + Path.GetFileName(loadPicture);
             }
         }
         private void CompanyRedact_Click(object sender, EventArgs e)
